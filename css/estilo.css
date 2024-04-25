@@ -4,6 +4,65 @@
     box-sizing: border-box;
 }
 
+.container {
+  display: grid;
+  height: 600px;
+  border: 3px solid red;
+
+
+  grid-template-columns: 150px 150px 150px;
+  /* column-gap: 5px; */
+
+  grid-template-rows: 150px 150px 150;
+ /*  row-gap: 5px; */
+  
+  gap: 5px;
+  
+  /* justify-content: center;
+  align-content: center; */
+
+  
+  /*  justify - horizontal. 
+      align = vertical      */
+
+  justify-items: center;
+  align-items: center;
+
+}
+
+.box {
+  background-color: blueviolet;
+  border: 2px solid blue;
+  color: white;
+
+}
+
+.container :nth-child(3) {
+  background-color: red;
+  justify-self: center;
+  align-self: center;
+  transition: all 0.5s ease;
+}
+
+.container :nth-child(3):hover {
+  background-color: black;
+/*   justify-self: flex-end;
+  align-self: flex-end; */
+  border-radius: 50%;
+  padding: 20%;
+  cursor: pointer;
+}
+
+
+/* 
+.box-5 {
+  background-color: red;
+  transition: all .4s ease;
+}
+.box-5:hover{
+  background-color: black;
+  padding: 20%;
+} */
 
 
 
