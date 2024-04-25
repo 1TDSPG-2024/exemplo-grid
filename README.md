@@ -56,4 +56,4 @@ O CSS Grid Layout é um sistema de layout bidimensional que permite criar layout
 </html>
 
 
-[Esse exemplo cria uma grade com três colunas, onde cada coluna tem a mesma largura (`1fr`). Os itens dentro da grade são divs com a classe `.item`. O CSS define estilos para a `.container` como uma grade com espaçamento entre as células e estilos básicos para os itens.]
+Esse exemplo cria uma grade com três colunas, onde cada coluna tem a mesma largura (`1fr`). Os itens dentro da grade são divs com a classe `.item`. O CSS define estilos para a `.container` como uma grade com espaçamento entre as células e estilos básicos para os itens.
