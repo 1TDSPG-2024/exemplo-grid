@@ -6,16 +6,36 @@
 
 .container{
   display: grid;
-  height: 600px;
+  height: 100vh;
   border: 3px solid #000;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5px;
-  grid-template-rows: repeat(3, 150px);
-  justify-items: center; /*Horizontal*/
+  grid-auto-rows: auto;
+  /* justify-items: center; Horizontal
   align-items: center;
   /*align-content: center; Vertical */
 }
 
+.container :nth-child(1){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+.container :nth-child(2){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.container :nth-child(3){
+  grid-column: span 2;
+  grid-row: span 4;
+}
+.container :nth-child(4){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.container :nth-child(5){
+  grid-column: span 4;
+  grid-row: span 1;
+}
 
 /* .box-5 {
   background-color: red !important;
@@ -33,7 +53,7 @@
   text-align: center;
 }
 
-.container :nth-child(5) { /* even-odd-3n */
+/* .container :nth-child(5) {   even-odd-3n 
   background-color: red !important;
   justify-self: flex-end;
   align-self: flex-end;
@@ -47,7 +67,7 @@
   border-radius: 55%;
   padding: 20%;
   cursor: pointer;
-}
+} */
 
 /*
 #cabecalho{
