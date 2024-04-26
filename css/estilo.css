@@ -1,7 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container{
@@ -37,6 +37,7 @@
   grid-row: span 1;
 }
 
+
 /* .box-5 {
   background-color: red !important;
   transition: all .4s ease;
@@ -52,6 +53,34 @@
   color: #fff;
   text-align: center;
 }
+
+@media screen and (max-width: 375px){
+  .container :nth-child(1) {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 414px ){
+  .container :nth-child(n+1){
+    grid-column: span 4;
+    grid-row: span 1; 
+  }
+  /* .container :nth-child(3){
+    order: 
+  } */
+}
+/* @media screen and (max-width: 414px ){
+  .container :nth-child(3){
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+}
+@media screen and (max-width: 414px ){
+  .container :nth-child(4){
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+} */
 
 /* .container :nth-child(5) {   even-odd-3n 
   background-color: red !important;
