@@ -60,6 +60,68 @@ grid-column-end: 3; */
 grid-column: span 4;
 grid-row: span 1;
 }
+@media screen and (max-width:375px){
+  .container :nth-child(1){
+    background-color:red;
+  }
+}
+@media screen and (max-width:414px) {
+  .container :nth-child(n+1){
+    grid-column: span 4 ;
+    grid-row: span 1;
+  }
+  .container :nth-child(1){
+    background-color: black;
+  }
+  .container :nth-child(2){
+    background-color: white;
+  }
+  .container :nth-child(3){
+    background-color: red;
+  }
+  .container :nth-child(4){
+    background-color: white;
+  }
+  .container :nth-child(5){
+    background-color: black;
+  }
+}
+
+/* @media screen and (max-width:414px) {
+  .container :nth-child(1){
+    background-color: blue;
+    grid-column:span 4 ;
+    grid-row: span 1;
+  }
+}
+@media screen and (max-width:414px) {
+  .container :nth-child(2){
+    background-color: blue;
+    grid-column: span 4 ;
+    grid-row: span 1;
+  }
+}
+@media screen and (max-width:414px) {
+  .container :nth-child(3){
+    background-color: blue;
+    grid-column: span 4 ;
+    grid-row: span 1;
+  }
+}
+@media screen and (max-width:414px) {
+  .container :nth-child(4){
+    background-color: blue;
+    grid-column: span 4 ;
+    grid-row: span 1;
+  }
+}
+@media screen and (max-width:414px) {
+  .container :nth-child(5){
+    background-color: blue;
+    grid-column: span 4 ;
+    grid-row: span 1;
+  }
+} */
 /* .container :nth-child(3n) {
 background-color: red !important;
 justify-self: flex-end ;
