@@ -6,13 +6,13 @@
 
 .container{
 display: grid;
-height: 600px;
+height: 100vh;
 border: 3px solid #0000ff;
 
-grid-template-columns: 150px 150px 150px 150px;
+grid-template-columns: repeat(4,1fr);
 /* column-gap: 5px; */
 
-grid-template-rows:  150px 150px 150px;
+grid-auto-rows:  auto;
 /* row-gap: 5px; */
 
 gap: 5px;
@@ -38,27 +38,27 @@ grid-row: span 1;
 /* grid-column-start: 1;
 grid-column-end: 3; */
 grid-column: span 2;
-grid-row: span 1;
+grid-row: span 2;
 }
 .container :nth-child(3){
 /* grid-column-start: 1;
 grid-column-end: 3; */
 grid-column: span 2;
-grid-row: span 2;
+grid-row: span 4;
 }
 
 .container :nth-child(4){
 /* grid-column-start: 1;
 grid-column-end: 3; */
 grid-column: span 2;
-grid-row: span 1;
+grid-row: span 2;
 }
 
 .container :nth-child(5){
 /* grid-column-start: 1;
 grid-column-end: 3; */
 grid-column: span 4;
-grid-row: span 2;
+grid-row: span 1;
 }
 /* .container :nth-child(3n) {
 background-color: red !important;
