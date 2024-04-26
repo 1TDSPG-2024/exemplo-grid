@@ -11,15 +11,20 @@ border: 3px solid #0000ff;
 
 grid-template-columns: repeat(4,1fr);
 /* column-gap: 5px; */
+
 grid-auto-rows:  auto;
 /* row-gap: 5px; */
+
 gap: 5px;
+
 /* justify-content: center;
 align-content: center; */
+
 /* justify é horizontal
 align é vertical */
 /* justify-items: center;
 align-items: center; */
+
 }
 
 .container :nth-child(1){
@@ -54,6 +59,23 @@ grid-row: span 2;
 grid-column-end: 3; */
 grid-column: span 4;
 grid-row: span 1;
+}
+
+@media screen and (max-width:375px){
+
+.container :nth-child(1){
+  background-color: #ff0000;
+}
+
+}
+
+@media screen and (max-width:414px){
+
+.container :nth-child(n+1) {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
 }
 
 /* .container :nth-child(3n) {
