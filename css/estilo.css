@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .container{
   display: grid;
   height: 100vh;
@@ -178,3 +179,19 @@
     
   } 
 } */
+
+
+@media screen and (max-width: 375px) {
+  .container :nth-child(1){
+    background-color: red;
+  }
+}
+
+@media screen and (max-width:414px) {
+ 
+  .container :nth-child(1),.container :nth-child(2), .container :nth-child(3), .container :nth-child(4), .container :nth-child(5) {
+    grid-column: span 4;
+    grid-row: span 1;
+
+}
+}
