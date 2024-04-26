@@ -54,6 +54,21 @@
   grid-row: span 2;
 }
 
+@media screen and (max-width: 375px){}
+  
+  .container :nth-child(1){
+  background-color: red;
+}
+
+@media screen and (max-width: 414px){}
+
+.container :nth-child(n+1){
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+
+
 .container :nth-child(5){
   /* grid-column-start: 1;
   grid-column-end: 3; */
