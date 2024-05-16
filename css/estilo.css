@@ -1,22 +1,63 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container{
+.container {
   display: grid;
   height: 100vh;
   border: 3px solid #000;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 5px;
-  grid-auto-rows: auto;
+  grid-template-areas:
+    'header header header header'
+    'help-2 help-2 login login'
+    'about about login login'
+    'footer footer footer footer';
   /* justify-items: center; Horizontal
   align-items: center;
   /*align-content: center; Vertical */
 }
 
-.container :nth-child(1){
+.cabecalho {
+  grid-area: header;
+}
+.ajuda2 {
+  grid-area: help-2;
+}
+.sobre {
+  grid-area: about;
+}
+.entrar {
+  grid-area: login;
+}
+.rodape {
+  grid-area: footer;
+}
+
+@media (orientation:portrait) {
+
+  .container{
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas:
+    'header header header header'
+    'login login login login'
+    'help-2 help-2 help-2 help-2'
+    'about about about about'
+    'footer footer footer footer';
+  }
+}
+
+.box {
+  background-color: #8a2be2;
+  border: 2px solid #00f;
+  color: #fff;
+  text-align: center;
+}
+
+/* .container :nth-child(1){
   grid-column: span 4;
   grid-row: span 1;
 }
@@ -35,8 +76,20 @@
 .container :nth-child(5){
   grid-column: span 4;
   grid-row: span 1;
+} */
+
+@media screen and (max-width: 375px) {
+  .container :nth-child(1) {
+    background-color: red;
+  }
 }
 
+@media screen and (max-width: 414px) {
+  .container :nth-child(n + 1) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+}
 
 /* .box-5 {
   background-color: red !important;
@@ -47,28 +100,9 @@
   background-color: #000 !important;
 } */
 
-.box{
-  background-color: #8a2be2;
-  border: 2px solid #00f;
-  color: #fff;
-  text-align: center;
-}
-
-@media screen and (max-width: 375px){
-  .container :nth-child(1) {
-    background-color: red;
-  }
-}
-
-@media screen and (max-width: 414px ){
-  .container :nth-child(n+1){
-    grid-column: span 4;
-    grid-row: span 1; 
-  }
-  /* .container :nth-child(3){
+/* .container :nth-child(3){
     order: 
   } */
-}
 /* @media screen and (max-width: 414px ){
   .container :nth-child(3){
     grid-column: span 4;
