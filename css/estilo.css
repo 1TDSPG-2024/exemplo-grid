@@ -5,17 +5,70 @@
 }
 
 .container{
-display: grid;
-height: 100vh;
-border: 3px solid #0000ff;
+  display: grid;
+  height: 100vh;
+  border: 3px solid #0000ff;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+  gap: 5px;
 
-grid-template-columns: repeat(4,1fr);
+  grid-template-areas: 
+  'header header header header'
+  'help-2 help-2 login login'
+  'about about login login'
+  'footer footer footer footer'
+  ;
+}
+
+.cabecalho{
+  grid-area: header;
+}
+
+.ajuda2{
+  grid-area: help-2;
+}
+
+.sobre{
+  grid-area: about;
+}
+
+.entrar{
+  grid-area: login;
+}
+
+.rodape{
+  grid-area: footer;
+}
+
+.box{
+  background-color: #8a2be2;
+  border: 2px solid #0000ff;
+  color: #fff;
+  text-align: center;
+  }
+
+@media (orientation:portrait) {
+
+  .container{
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+    'header header header header'
+    'login login login login'
+    'help-2 help-2 help-2 help-2'
+    'about about about about'
+    'footer footer footer footer'
+    ;
+  }
+  
+}
+
+/* grid-template-columns: repeat(4,1fr);
 /* column-gap: 5px; */
 
-grid-auto-rows:  auto;
+/* grid-auto-rows:  auto; */
 /* row-gap: 5px; */
 
-gap: 5px;
+/* gap: 5px; */
 
 /* justify-content: center;
 align-content: center; */
@@ -25,43 +78,32 @@ align é vertical */
 /* justify-items: center;
 align-items: center; */
 
-}
-
+/*
 .container :nth-child(1){
-/* grid-column-start: 1;
-grid-column-end: 3; */
 grid-column: span 4;
 grid-row: span 1;
 }
 
 .container :nth-child(2){
-/* grid-column-start: 1;
-grid-column-end: 3; */
 grid-column: span 2;
 grid-row: span 2;
 }
 .container :nth-child(3){
-/* grid-column-start: 1;
-grid-column-end: 3; */
 grid-column: span 2;
 grid-row: span 4;
 }
 
 .container :nth-child(4){
-/* grid-column-start: 1;
-grid-column-end: 3; */
 grid-column: span 2;
 grid-row: span 2;
 }
 
 .container :nth-child(5){
-/* grid-column-start: 1;
-grid-column-end: 3; */
 grid-column: span 4;
 grid-row: span 1;
-}
+} */
 
-@media screen and (max-width:375px){
+/* @media screen and (max-width:375px){
 
 .container :nth-child(1){
   background-color: #ff0000;
@@ -78,7 +120,7 @@ grid-row: span 1;
 
 }
 
-/* .container :nth-child(3n) {
+.container :nth-child(3n) {
 background-color: red !important;
 justify-self: flex-end ;
 align-self: flex-end;
@@ -92,35 +134,24 @@ align-self: flex-end;
 border-radius: 55%;
 padding: 50%;
 cursor: pointer;
-} */
+}
 
 
-/* .box-5 {
+.box-5 {
 background-color: red !important;
 transition: all .4s ease;
 }
 
 .box-5:hover {
 padding: 10% !important;
-} */
-
-
-/* .box-5{
-background-color: red !important;
-} */
-
-
-.box{
-background-color: #8a2be2;
-border: 2px solid #0000ff;
-color: #fff;
-text-align: center;
 }
 
 
+.box-5{
+background-color: red !important;
+} */
 
-
-/*
+/* 
 #cabecalho{
 background-color: #130e0e;
 height: 100px;
